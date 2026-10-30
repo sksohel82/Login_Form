@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Form</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #141e30, #243b55);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background: #ffffff;
+        width: 500px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #243b55;
+      }
+
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      legend {
+        padding: 0 10px;
+        font-weight: 600;
+        color: #243b55;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #243b55;
+        outline: none;
+        box-shadow: 0 0 5px rgba(36, 59, 85, 0.3);
+      }
+
+      .gender-group {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .gender-group input {
+        width: auto;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .submit-btn {
+        background-color: #243b55;
+        color: white;
+      }
+
+      .submit-btn:hover {
+        background-color: #141e30;
+      }
+
+      .reset-btn {
+        background-color: #ccc;
+      }
+
+      .reset-btn:hover {
+        background-color: #999;
+        color: white;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Course Registration Form</h1>
+
+      <form>
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div class="form-group">
+            <label>First Name</label>
+            <input
+              type="text"
+              placeholder="Ex: Sohel"
+              minlength="4"
+              maxlength="25"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Surname</label>
+            <input type="text" placeholder="Ex: Shaik" />
+          </div>
+
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="+91 8886479659" required />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="example@gmail.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" required />
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" required />
+          </div>
+
+          <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" />
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="gender-group">
+              <label><input type="radio" name="gender" /> Male</label>
+              <label><input type="radio" name="gender" /> Female</label>
+              <label><input type="radio" name="gender" /> Custom</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Select Country</label>
+            <select>
+              <option value="">-- Select Country --</option>
+              <option>India</option>
+              <option>USA</option>
+              <option>UAE</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Upload Picture</label>
+            <input type="file" multiple />
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label>Give Your Feedback</label>
+          <textarea rows="4"></textarea>
+        </div>
+
+        <div class="btn-group">
+          <button type="reset" class="reset-btn">Reset</button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
